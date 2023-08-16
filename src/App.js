@@ -1,5 +1,19 @@
+import Form from "./Components/Form";
+import Logo from "./Components/Logo";
+import PackingList from "./Components/PackingList";
+import Stats from "./Components/Stats";
+import './index.css'
+
+
 function App() {
-  return <div className="App"><h1>Hey!!!</h1></div>;
+  return (
+    <div className="app">
+      <Logo />
+      <Form />
+      <PackingList />
+      <Stats />
+    </div>
+  );
 }
 
 export default App;
