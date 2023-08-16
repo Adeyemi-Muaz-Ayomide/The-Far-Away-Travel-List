@@ -1,8 +1,8 @@
 const Stats = () => {
   return (
-    <div className="stats">
-      <p>You have 6 items on your list, and you already packed 0 (0%)</p>
-    </div>
+    <footer className="stats">
+      <em>💼You have 6 items on your list, and you already packed 0 (0%)</em>
+    </footer>
   );
 };
 
