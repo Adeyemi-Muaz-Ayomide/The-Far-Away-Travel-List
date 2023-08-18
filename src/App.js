@@ -12,11 +12,15 @@ function App() {
     setItems((prevItem) => [...prevItem, item])
   }
 
+  const handleDelete = (id) => {
+    setItems((items) => items.filter((item) => item.id !== id))
+  }
+
   return (
     <div className="app">
       <Logo />
       <Form onAddItem={handleAddItems}/>
-      <PackingList items={items}/>
+      <PackingList items={items} onDeleteItem={handleDelete}/>
       <Stats />
     </div>
   );
