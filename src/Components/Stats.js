@@ -14,8 +14,8 @@ const Stats = ({ items }) => {
         "You got everything! You're ready to go✈️"
       ) : (
         <em>
-          💼You have {numItems} items on your list, and you already packed
-          {packedItems} ({percentage}%)
+          {`💼You have ${numItems} items on your list, and you already packed 
+          ${packedItems} (${percentage}%)`}
         </em>
       )}
     </footer>

@@ -23,11 +23,24 @@ function App() {
       )
     );
   };
+
+  const handleClearList = () => {
+    if (!items.length) return;
+    const confirmed = window.confirm(
+      "Are you sure you want to delete all items?"
+    );
+    if (confirmed) setItems([]);
+  };
   return (
     <div className="app">
       <Logo />
       <Form onAddItem={handleAddItems} />
-      <PackingList items={items} onDeleteItem={handleDelete} onToggleItem={handleToggle} />
+      <PackingList
+        items={items}
+        onDeleteItem={handleDelete}
+        onToggleItem={handleToggle}
+        onClearList={handleClearList}
+      />
       <Stats items={items} />
     </div>
   );
