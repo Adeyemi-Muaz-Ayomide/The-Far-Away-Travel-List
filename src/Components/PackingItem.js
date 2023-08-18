@@ -1,6 +1,7 @@
-const PackingItem = ({ item, onDeleteItem }) => {
+const PackingItem = ({ item, onDeleteItem, onToggleItem }) => {
   return (
     <li>
+      <input type="checkbox" value={item.packed} onChange={() => onToggleItem(item.id)}/>
       <span className={item.packed ? 'slash' : '' }>
         {item.quantity} {item.description}
       </span>
